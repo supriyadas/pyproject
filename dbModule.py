@@ -1,0 +1,1 @@
+import pymysqldb = pymysql.connect("127.0.0.1","root","","test" )# prepare a cursor object using cursor() methodcursor = db.cursor()# execute SQL query using execute() method.cursor.execute("SELECT * FROM `rss_feed_item`")results = cursor.fetchall()for row in results:	print (row[0])# disconnect from serverdb.close()
